@@ -16,17 +16,17 @@ patches and changes on top.
 === Modifications
 
 ==== Added
-1. 0052-most-private-WebRTC-IP-handling-policy-by-default.patch
-2. 0061-set-default-search-engine-to-DuckDuckGo.patch
-3. 0114-Implement-UI-for-WebRTC-toggle.patch
+1. https://src.reticentadmin.com/aryan/hardened-chromium/src/branch/main/patches/vanadium/0052-most-private-WebRTC-IP-handling-policy-by-default.patch[0052-most-private-WebRTC-IP-handling-policy-by-default.patch]
+2. https://src.reticentadmin.com/aryan/hardened-chromium/src/branch/main/patches/vanadium/0061-set-default-search-engine-to-DuckDuckGo.patch[0061-set-default-search-engine-to-DuckDuckGo.patch]
+3. https://src.reticentadmin.com/aryan/hardened-chromium/src/branch/main/patches/vanadium/0114-Implement-UI-for-WebRTC-toggle.patch[0114-Implement-UI-for-WebRTC-toggle.patch]
 
 ==== Removed
-1. disable-extensions-by-default.patch
-2. fedora_patches
+1. https://github.com/secureblue/hardened-chromium/blob/live/patches/disable-extensions-by-default.patch[disable-extensions-by-default.patch]
+2. https://github.com/secureblue/hardened-chromium/tree/live/fedora_patches[fedora_patches]
 
 ==== Archived
-1. vanadium/0188-Restriction-of-dynamic-code-execution-via-seccomp-bp.patch due
-   to compilation errors.
+1. https://src.reticentadmin.com/aryan/hardened-chromium/src/branch/main/patches/vanadium/0188-Restriction-of-dynamic-code-execution-via-seccomp-bp.patch.bak[0188-Restriction-of-dynamic-code-execution-via-seccomp-bp.patch]
+   due to compilation errors.
 
 === Acknowledgements
 
