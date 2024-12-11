@@ -19,8 +19,7 @@ index dc3191190654b..0be79c7d5dba7 100644
                                  false);
  #endif
    registry->RegisterStringPref(prefs::kWebRTCIPHandlingPolicy,
--                               blink::kWebRTCIPHandlingDefault);
-+                               blink::kWebRTCIPHandlingDisableNonProxiedUdp);
+                                blink::kWebRTCIPHandlingDefault);
    registry->RegisterStringPref(prefs::kWebRTCUDPPortRange, std::string());
    registry->RegisterBooleanPref(prefs::kWebRtcEventLogCollectionAllowed, false);
    registry->RegisterListPref(prefs::kWebRtcLocalIpsAllowedUrls);

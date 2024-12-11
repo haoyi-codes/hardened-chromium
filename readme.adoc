@@ -16,9 +16,10 @@ patches and changes on top.
 === Modifications
 
 ==== Added
-1. https://src.reticentadmin.com/aryan/hardened-chromium/src/branch/main/patches/vanadium/0052-most-private-WebRTC-IP-handling-policy-by-default.patch[0052-most-private-WebRTC-IP-handling-policy-by-default.patch]
-2. https://src.reticentadmin.com/aryan/hardened-chromium/src/branch/main/patches/vanadium/0061-set-default-search-engine-to-DuckDuckGo.patch[0061-set-default-search-engine-to-DuckDuckGo.patch]
-3. https://src.reticentadmin.com/aryan/hardened-chromium/src/branch/main/patches/vanadium/0114-Implement-UI-for-WebRTC-toggle.patch[0114-Implement-UI-for-WebRTC-toggle.patch]
+1. https://src.reticentadmin.com/aryan/hardened-chromium/src/branch/main/patches/vanadium/0061-set-default-search-engine-to-DuckDuckGo.patch[0061-set-default-search-engine-to-DuckDuckGo.patch]
+
+==== Changed
+1. https://src.reticentadmin.com/aryan/hardened-chromium/src/branch/main/patches/hardened-chromium/set-browser-defaults.patch[set-browser-defaults.patch] to enable WebRTC
 
 ==== Removed
 1. https://github.com/secureblue/hardened-chromium/blob/live/patches/disable-extensions-by-default.patch[disable-extensions-by-default.patch]
