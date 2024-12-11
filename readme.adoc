@@ -1,5 +1,11 @@
 == Description
 
+[WARNING]
+====
+Since gitea does not support relative links for asciidoc files, I have used
+absolute links instead. This means that they will not work for mirrors.
+====
+
 This repository holds patches that make chromium a more secure browser. These
 patches are meant to be used alongside my custom ebuild for chromium, which can be
 found in my https://src.reticentadmin.com/aryan/haoyis-gentoo-overlay[overlay].
@@ -28,12 +34,6 @@ patches and changes on top.
 2. https://github.com/GrapheneOS/Vanadium
 
 === Licenses
-
-[WARNING]
-====
-Since gitea does not support relative links for asciidoc files, I have used
-absolute links instead. This means that they will not work for mirrors.
-====
 
 This project uses third-party patches. Their licenses can be found in the
 https://src.reticentadmin.com/aryan/hardened-chromium/src/branch/main/licenses/[licenses] directory.
