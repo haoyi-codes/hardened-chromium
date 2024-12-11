@@ -13,12 +13,3 @@ index 5898b8c54bef2..d924cec372c1a 100644
      if (use_lld) {
        ldflags += [ "-fuse-ld=lld" ]
        if (lld_path != "") {
-@@ -2059,7 +2063,7 @@ config("chromium_code") {
-       # Non-chromium code is not guaranteed to compile cleanly with
-       # _FORTIFY_SOURCE. Also, fortified build may fail when optimizations are
-       # disabled, so only do that for Release build.
--      fortify_level = "2"
-+      fortify_level = "3"
- 
-       # ChromeOS's toolchain supports a high-quality _FORTIFY_SOURCE=3
-       # implementation with a few custom glibc patches. Use that if it's
