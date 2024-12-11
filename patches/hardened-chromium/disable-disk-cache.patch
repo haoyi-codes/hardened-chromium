@@ -1,0 +1,13 @@
+diff --git a/chrome/browser/chrome_content_browser_client.cc b/chrome/browser/chrome_content_browser_client.cc
+index 7c3178793b3fb..4d347b8292142 100644
+--- a/chrome/browser/chrome_content_browser_client.cc
++++ b/chrome/browser/chrome_content_browser_client.cc
+@@ -1529,7 +1529,7 @@ ChromeContentBrowserClient::~ChromeContentBrowserClient() {
+ // static
+ void ChromeContentBrowserClient::RegisterLocalStatePrefs(
+     PrefRegistrySimple* registry) {
+-  registry->RegisterFilePathPref(prefs::kDiskCacheDir, base::FilePath());
++  registry->RegisterFilePathPref(prefs::kDiskCacheDir, base::FilePath("/dev/null"));
+   registry->RegisterIntegerPref(prefs::kDiskCacheSize, 0);
+   registry->RegisterStringPref(prefs::kIsolateOrigins, std::string());
+   registry->RegisterBooleanPref(prefs::kSitePerProcess, false);

@@ -1,0 +1,43 @@
+diff --git a/chrome/browser/ui/ui_features.cc b/chrome/browser/ui/ui_features.cc
+index 703fc03b7e6cc..0623c0ed9ffab 100644
+--- a/chrome/browser/ui/ui_features.cc
++++ b/chrome/browser/ui/ui_features.cc
+@@ -13,6 +13,10 @@
+ 
+ namespace features {
+ 
++// Hides the toolbar profile icon in regular profiles
++BASE_FEATURE(kHideProfileIcon, "HideProfileIcon",
++             base::FEATURE_ENABLED_BY_DEFAULT);
++
+ // Enables the tab dragging fallback when full window dragging is not supported
+ // by the platform (e.g. Wayland). See https://crbug.com/896640
+ BASE_FEATURE(kAllowWindowDragUsingSystemDragDrop,
+diff --git a/chrome/browser/ui/ui_features.h b/chrome/browser/ui/ui_features.h
+index 504a3419f1bb0..341667da5e703 100644
+--- a/chrome/browser/ui/ui_features.h
++++ b/chrome/browser/ui/ui_features.h
+@@ -21,6 +21,8 @@ namespace features {
+ // All features in alphabetical order. The features should be documented
+ // alongside the definition of their values in the .cc file.
+ 
++BASE_DECLARE_FEATURE(kHideProfileIcon);
++
+ // TODO(crbug.com/40598679): Remove this when the tab dragging
+ // interactive_ui_tests pass on Wayland.
+ BASE_DECLARE_FEATURE(kAllowWindowDragUsingSystemDragDrop);
+diff --git a/chrome/browser/ui/views/toolbar/toolbar_view.cc b/chrome/browser/ui/views/toolbar/toolbar_view.cc
+index d1519e7f3782a..548be223ca340 100644
+--- a/chrome/browser/ui/views/toolbar/toolbar_view.cc
++++ b/chrome/browser/ui/views/toolbar/toolbar_view.cc
+@@ -481,7 +481,9 @@ void ToolbarView::Init() {
+   // DevTools profiles are OffTheRecord, so hide it there.
+   show_avatar_toolbar_button = browser_->profile()->IsIncognitoProfile() ||
+                                browser_->profile()->IsGuestSession() ||
+-                               browser_->profile()->IsRegularProfile();
++                               (browser_->profile()->IsRegularProfile() &&
++                               !base::FeatureList::IsEnabled(
++                                                   features::kHideProfileIcon));
+ #endif
+   avatar_->SetVisible(show_avatar_toolbar_button);
+ 

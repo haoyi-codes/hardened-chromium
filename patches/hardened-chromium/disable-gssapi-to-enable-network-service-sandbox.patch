@@ -1,0 +1,18 @@
+diff --git a/chrome/browser/net/system_network_context_manager.cc b/chrome/browser/net/system_network_context_manager.cc
+index 249ff5ecffa8d..c9c36e3226290 100644
+--- a/chrome/browser/net/system_network_context_manager.cc
++++ b/chrome/browser/net/system_network_context_manager.cc
+@@ -533,8 +533,12 @@ void SystemNetworkContextManager::GssapiLibraryLoadObserver::Install(
+ 
+ void SystemNetworkContextManager::GssapiLibraryLoadObserver::
+     OnBeforeGssapiLibraryLoad() {
++  // Keeping this enabled will disable the Network Service Sandbox when a
++  // website tries to use GSSAPI, not very secure. Flag can re-enable.
+   owner_->local_state_->SetBoolean(prefs::kReceivedHttpAuthNegotiateHeader,
+-                                   true);
++                                   base::CommandLine::
++                                   ForCurrentProcess()->HasSwitch(
++                                                        "enable-gssapi"));
+ }
+ #endif  // BUILDFLAG(IS_LINUX)
+ 

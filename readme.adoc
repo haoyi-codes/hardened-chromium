@@ -1,0 +1,42 @@
+== Description
+
+This repository holds patches that make chromium a more secure browser. These
+patches are meant to be used alongside my custom ebuild for chromium, which can be
+found in my https://src.reticentadmin.com/aryan/haoyis-gentoo-overlay[overlay].
+
+We are using secureblue's hardened-chromium as a base and including extra
+patches and changes on top.
+
+=== Modifications
+
+==== Added
+1. 0052-most-private-WebRTC-IP-handling-policy-by-default.patch
+2. 0061-set-default-search-engine-to-DuckDuckGo.patch
+3. 0114-Implement-UI-for-WebRTC-toggle.patch
+
+==== Removed
+1. disable-extensions-by-default.patch
+2. fedora_patches
+
+==== Archived
+1. vanadium/0188-Restriction-of-dynamic-code-execution-via-seccomp-bp.patch due
+   to compilation errors.
+
+=== Acknowledgements
+
+1. https://github.com/secureblue/hardened-chromium
+2. https://github.com/GrapheneOS/Vanadium
+
+=== Licenses
+
+[WARNING]
+====
+Since gitea does not support relative links for asciidoc files, I have used
+absolute links instead. This means that they will not work for mirrors.
+====
+
+This project uses third-party patches. Their licenses can be found in the
+https://src.reticentadmin.com/aryan/hardened-chromium/src/branch/main/licenses/[licenses] directory.
+
+* https://src.reticentadmin.com/aryan/hardened-chromium/src/branch/main/licenses/hardened-chromium/[hardened-chromium]: Patches from SecureBlue's hardened-chromium.
+* https://src.reticentadmin.com/aryan/hardened-chromium/src/branch/main/licenses/vanadium/[vanadium]: Patches from GrapheneOS's Vanadium.

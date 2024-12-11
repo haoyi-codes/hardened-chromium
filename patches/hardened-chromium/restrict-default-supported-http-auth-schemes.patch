@@ -1,0 +1,13 @@
+diff --git a/chrome/browser/net/system_network_context_manager.cc b/chrome/browser/net/system_network_context_manager.cc
+index d2acbdc28805c..bb1a23f1a77d9 100644
+--- a/chrome/browser/net/system_network_context_manager.cc
++++ b/chrome/browser/net/system_network_context_manager.cc
+@@ -644,7 +644,7 @@ void SystemNetworkContextManager::RegisterPrefs(PrefRegistrySimple* registry) {
+ 
+   // Static auth params
+   registry->RegisterStringPref(prefs::kAuthSchemes,
+-                               "basic,digest,ntlm,negotiate");
++                               "ntlm,negotiate");
+ #if BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_CHROMEOS)
+   registry->RegisterStringPref(prefs::kGSSAPILibraryName, std::string());
+ #endif  // BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_ANDROID) &&
