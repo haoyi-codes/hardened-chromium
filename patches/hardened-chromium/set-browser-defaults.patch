@@ -2,7 +2,7 @@ diff --git a/chrome/browser/ui/browser_ui_prefs.cc b/chrome/browser/ui/browser_u
 index dc3191190654b..0be79c7d5dba7 100644
 --- a/chrome/browser/ui/browser_ui_prefs.cc
 +++ b/chrome/browser/ui/browser_ui_prefs.cc
-@@ -95,10 +95,10 @@
+@@ -97,10 +97,10 @@ void RegisterBrowserUserPrefs(user_prefs::PrefRegistrySyncable* registry) {
    registry->RegisterBooleanPref(prefs::kWebAppCreateInAppsMenu, true);
    registry->RegisterBooleanPref(prefs::kWebAppCreateInQuickLaunchBar, true);
    registry->RegisterBooleanPref(
@@ -15,28 +15,33 @@ index dc3191190654b..0be79c7d5dba7 100644
    registry->RegisterDictionaryPref(prefs::kBrowserWindowPlacement);
    registry->RegisterDictionaryPref(prefs::kBrowserWindowPlacementPopup);
    registry->RegisterDictionaryPref(prefs::kAppWindowPlacement);
-@@ -111,15 +111,15 @@
+@@ -109,19 +109,19 @@ void RegisterBrowserUserPrefs(user_prefs::PrefRegistrySyncable* registry) {
+                                 false);
+ #endif
+   registry->RegisterStringPref(prefs::kWebRTCIPHandlingPolicy,
+-                               blink::kWebRTCIPHandlingDefault);
++                               blink::kWebRTCIPHandlingDisableNonProxiedUdp);
    registry->RegisterStringPref(prefs::kWebRTCUDPPortRange, std::string());
    registry->RegisterBooleanPref(prefs::kWebRtcEventLogCollectionAllowed, false);
    registry->RegisterListPref(prefs::kWebRtcLocalIpsAllowedUrls);
 -  registry->RegisterBooleanPref(prefs::kWebRtcTextLogCollectionAllowed, true);
 +  registry->RegisterBooleanPref(prefs::kWebRtcTextLogCollectionAllowed, false);
-
+ 
    // We need to register the type of these preferences in order to query
    // them even though they're only typically controlled via policy.
    registry->RegisterBooleanPref(policy::policy_prefs::kHideWebStoreIcon, false);
 -  registry->RegisterBooleanPref(prefs::kSharedClipboardEnabled, true);
 +  registry->RegisterBooleanPref(prefs::kSharedClipboardEnabled, false);
-
+ 
  #if BUILDFLAG(ENABLE_CLICK_TO_CALL)
 -  registry->RegisterBooleanPref(prefs::kClickToCallEnabled, true);
 +  registry->RegisterBooleanPref(prefs::kClickToCallEnabled, false);
  #endif  // BUILDFLAG(ENABLE_CLICK_TO_CALL)
-
+ 
  #if BUILDFLAG(IS_MAC)
-@@ -168,7 +168,7 @@
+@@ -170,7 +170,7 @@ void RegisterBrowserUserPrefs(user_prefs::PrefRegistrySyncable* registry) {
  #endif
-
+ 
    registry->RegisterBooleanPref(
 -      prefs::kHttpsOnlyModeEnabled, false,
 +      prefs::kHttpsOnlyModeEnabled, true,
