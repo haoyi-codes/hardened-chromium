@@ -10,7 +10,7 @@ This repository holds patches that make chromium a more secure browser. These
 patches are meant to be used alongside my custom ebuild for chromium, which can be
 found in my https://src.reticentadmin.com/aryan/haoyis-gentoo-overlay[overlay].
 
-We are using secureblue's hardened-chromium as a base and including extra
+We are using secureblue's Trivalent as a base and including extra
 patches and changes on top.
 
 === Modifications
@@ -19,11 +19,11 @@ patches and changes on top.
 1. https://src.reticentadmin.com/aryan/hardened-chromium/src/branch/main/patches/vanadium/0061-set-default-search-engine-to-DuckDuckGo.patch[0061-set-default-search-engine-to-DuckDuckGo.patch]
 
 ==== Changed
-1. https://src.reticentadmin.com/aryan/hardened-chromium/src/branch/main/patches/hardened-chromium/build-hardening.patch[build-hardening.patch] to remove fortify_level (disabled in gentoo)
+1. https://src.reticentadmin.com/aryan/hardened-chromium/src/branch/main/patches/trivalent/build-hardening.patch[build-hardening.patch] to remove fortify_level (disabled in gentoo)
 
 ==== Removed
-1. https://github.com/secureblue/hardened-chromium/blob/live/patches/disable-extensions-by-default.patch[disable-extensions-by-default.patch]
-2. https://github.com/secureblue/hardened-chromium/tree/live/fedora_patches[fedora_patches]
+1. https://github.com/secureblue/Trivalent/blob/live/patches/disable-extensions-by-default.patch[disable-extensions-by-default.patch]
+2. https://github.com/secureblue/Trivalent/tree/live/fedora_patches[fedora_patches]
 
 ==== Archived
 1. https://src.reticentadmin.com/aryan/hardened-chromium/src/branch/main/patches/vanadium/0189-Restriction-of-dynamic-code-execution-via-seccomp-bp.patch.bak[0189-Restriction-of-dynamic-code-execution-via-seccomp-bp.patch]
@@ -31,7 +31,7 @@ patches and changes on top.
 
 === Acknowledgements
 
-1. https://github.com/secureblue/hardened-chromium
+1. https://github.com/secureblue/Trivalent
 2. https://github.com/GrapheneOS/Vanadium
 
 === Licenses
@@ -39,5 +39,6 @@ patches and changes on top.
 This project uses third-party patches. Their licenses can be found in the
 https://src.reticentadmin.com/aryan/hardened-chromium/src/branch/main/licenses/[licenses] directory.
 
-* https://src.reticentadmin.com/aryan/hardened-chromium/src/branch/main/licenses/hardened-chromium/[hardened-chromium]: Patches from SecureBlue's hardened-chromium.
+*
+https://src.reticentadmin.com/aryan/hardened-chromium/src/branch/main/licenses/trivalent/[trivalent]: Patches from SecureBlue's Trivalent.
 * https://src.reticentadmin.com/aryan/hardened-chromium/src/branch/main/licenses/vanadium/[vanadium]: Patches from GrapheneOS's Vanadium.
