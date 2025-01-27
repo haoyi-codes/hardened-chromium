@@ -26,7 +26,7 @@ patches and changes on top.
 2. https://github.com/secureblue/Trivalent/tree/live/fedora_patches[fedora_patches]
 
 ==== Archived
-1. https://src.reticentadmin.com/aryan/hardened-chromium/src/branch/main/patches/vanadium/0189-Restriction-of-dynamic-code-execution-via-seccomp-bp.patch.bak[0189-Restriction-of-dynamic-code-execution-via-seccomp-bp.patch]
+1. https://src.reticentadmin.com/aryan/hardened-chromium/src/branch/main/patches/vanadium/0188-Restriction-of-dynamic-code-execution-via-seccomp-bp.patch.bak[0189-Restriction-of-dynamic-code-execution-via-seccomp-bp.patch]
    due to compilation errors.
 
 === Acknowledgements
