@@ -19,6 +19,9 @@ patches and changes on top.
 1. https://src.reticentadmin.com/aryan/hardened-chromium/src/branch/main/patches/extra/0061-set-default-search-engine-to-DuckDuckGo.patch[0061-set-default-search-engine-to-DuckDuckGo.patch]
 2. https://src.reticentadmin.com/aryan/hardened-chromium/src/branch/main/patches/extra/build-hardening.patch[build-hardening.patch]
 
+==== Changed
+1. https://src.reticentadmin.com/aryan/hardened-chromium/src/branch/main/patches/extra/0064-require-HTTPS-for-component-updates.patch[0064-require-HTTPS-for-component-updates.patch] (removed android section)
+
 ==== Removed
 1. https://github.com/secureblue/Trivalent/blob/live/patches/disable-extensions-by-default.patch[disable-extensions-by-default.patch]
 2. https://github.com/secureblue/Trivalent/tree/live/patches/build-hardening.patch[build-hardening.patch]
