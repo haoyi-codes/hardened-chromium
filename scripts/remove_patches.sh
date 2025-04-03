@@ -6,12 +6,13 @@
 # Copyright (c) 2025 Aryan
 # SPDX-License-Identifier: BSD-3-Clause
 
-# Version: 1.0.0
+# Version: 1.1.0
 
 readonly vanadium_patches_path="../patches/vanadium/"
 readonly trivalent_patches_path="../patches/trivalent/"
 
 # Trivalent
+rm "${trivalent_patches_path}/default-disable-3d-apis.patch"
 rm "${trivalent_patches_path}/disable-extensions-by-default.patch"
 rm "${trivalent_patches_path}/build-hardening.patch"
 
